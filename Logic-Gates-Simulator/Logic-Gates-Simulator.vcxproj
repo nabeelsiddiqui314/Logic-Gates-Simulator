@@ -140,12 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\InputPin.cpp" />
+    <ClCompile Include="src\Core\OutputPin.cpp" />
     <ClCompile Include="src\Core\Wire.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Core\InputPin.h" />
     <ClInclude Include="src\Core\IPin.h" />
+    <ClInclude Include="src\Core\OutputPin.h" />
     <ClInclude Include="src\Core\Signal.h" />
     <ClInclude Include="src\Core\Wire.h" />
   </ItemGroup>
