@@ -18,6 +18,10 @@ void Wire::disconnect(const PinPtr& pin) {
 	pin->onDisconnect(shared_from_this());
 }
 
+void Wire::transmitSignal(const Signal& signal) {
+	m_destinationPin->receiveSignal(signal);
+}
+
 bool Wire::setSource(const PinPtr& pin) {
 	if (!m_sourcePin) {
 		m_sourcePin = pin;

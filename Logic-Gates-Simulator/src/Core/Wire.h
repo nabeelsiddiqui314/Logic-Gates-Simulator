@@ -1,5 +1,6 @@
 #pragma once
 #include <memory>
+#include "Signal.h"
 
 class IPin;
 
@@ -11,6 +12,8 @@ public:
 public:
 	bool connect(const PinPtr& pin);
 	void disconnect(const PinPtr& pin);
+
+	void transmitSignal(const Signal& signal);
 
 	bool setSource(const PinPtr& pin);
 	bool setDestination(const PinPtr& pin);

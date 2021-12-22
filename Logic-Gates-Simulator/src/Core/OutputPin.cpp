@@ -8,7 +8,9 @@ OutputPin::~OutputPin() {
 }
 
 void OutputPin::receiveSignal(const Signal& signal) {
-	
+	for (auto& wire : m_connectedWires) {
+		wire->transmitSignal(signal);
+	}
 }
 
 bool OutputPin::onConnect(const WirePtr& wire) {
