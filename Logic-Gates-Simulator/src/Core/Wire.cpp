@@ -10,24 +10,28 @@ Wire::~Wire() {
 	}
 }
 
-void Wire::connect(const PinPtr& pin) {
-	pin->onConnect(shared_from_this());
+bool Wire::connect(const PinPtr& pin) {
+	return pin->onConnect(shared_from_this());
 }
 
 void Wire::disconnect(const PinPtr& pin) {
 	pin->onDisconnect(shared_from_this());
 }
 
-void Wire::setSource(const PinPtr& pin) {
+bool Wire::setSource(const PinPtr& pin) {
 	if (!m_sourcePin) {
 		m_sourcePin = pin;
+		return true;
 	}
+	return false;
 }
 
-void Wire::setDestination(const PinPtr& pin) {
+bool Wire::setDestination(const PinPtr& pin) {
 	if (!m_destinationPin) {
 		m_destinationPin = pin;
+		return true;
 	}
+	return false;
 }
 
 void Wire::removeSource() {

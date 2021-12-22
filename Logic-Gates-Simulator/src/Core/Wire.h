@@ -9,11 +9,11 @@ public:
 	Wire() = default;
 	~Wire();
 public:
-	void connect(const PinPtr& pin);
+	bool connect(const PinPtr& pin);
 	void disconnect(const PinPtr& pin);
 
-	void setSource(const PinPtr& pin);
-	void setDestination(const PinPtr& pin);
+	bool setSource(const PinPtr& pin);
+	bool setDestination(const PinPtr& pin);
 
 	void removeSource();
 	void removeDestination();
