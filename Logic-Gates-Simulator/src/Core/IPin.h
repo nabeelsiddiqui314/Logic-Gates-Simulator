@@ -4,7 +4,8 @@
 
 class Wire;
 
-class IPin {
+class IPin : protected std::enable_shared_from_this<IPin> {
+protected:
 	typedef std::shared_ptr<Wire> WirePtr;
 public:
 	IPin() = default;
