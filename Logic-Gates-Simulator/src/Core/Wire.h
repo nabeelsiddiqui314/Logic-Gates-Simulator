@@ -5,23 +5,22 @@
 class IPin;
 
 class Wire : private std::enable_shared_from_this<Wire> {
-	typedef std::shared_ptr<IPin> PinPtr;
 public:
 	Wire() = default;
 	~Wire();
 public:
-	bool connect(const PinPtr& pin);
-	void disconnect(const PinPtr& pin);
+	bool connect(IPin* pin);
+	void disconnect(IPin* pin);
 	void disconnectCompletely();
 
 	void transmitSignal(const Signal& signal);
 
-	bool setSource(const PinPtr& pin);
-	bool setDestination(const PinPtr& pin);
+	bool setSource(IPin* pin);
+	bool setDestination(IPin* pin);
 
 	void removeSource();
 	void removeDestination();
 private:
-	PinPtr m_sourcePin;
-	PinPtr m_destinationPin;
+	IPin* m_sourcePin = nullptr;
+	IPin* m_destinationPin = nullptr;
 };

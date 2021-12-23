@@ -5,11 +5,11 @@ Wire::~Wire() {
 	disconnectCompletely();
 }
 
-bool Wire::connect(const PinPtr& pin) {
+bool Wire::connect(IPin* pin) {
 	return pin->onConnect(shared_from_this());
 }
 
-void Wire::disconnect(const PinPtr& pin) {
+void Wire::disconnect(IPin* pin) {
 	pin->onDisconnect(shared_from_this());
 }
 
@@ -26,7 +26,7 @@ void Wire::transmitSignal(const Signal& signal) {
 	m_destinationPin->receiveSignal(signal);
 }
 
-bool Wire::setSource(const PinPtr& pin) {
+bool Wire::setSource(IPin* pin) {
 	if (!m_sourcePin) {
 		m_sourcePin = pin;
 		return true;
@@ -34,7 +34,7 @@ bool Wire::setSource(const PinPtr& pin) {
 	return false;
 }
 
-bool Wire::setDestination(const PinPtr& pin) {
+bool Wire::setDestination(IPin* pin) {
 	if (!m_destinationPin) {
 		m_destinationPin = pin;
 		return true;

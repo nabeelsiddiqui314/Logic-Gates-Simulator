@@ -16,7 +16,7 @@ void OutputPin::receiveSignal(const Signal& signal) {
 bool OutputPin::onConnect(const WirePtr& wire) {
 	// if the wire isnt already connected
 	if (std::find(m_connectedWires.begin(), m_connectedWires.end(), wire) == m_connectedWires.end()) {
-		if (wire->setSource(shared_from_this())) {
+		if (wire->setSource(this)) {
 			m_connectedWires.push_back(wire);
 			return true;
 		}

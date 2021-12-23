@@ -12,7 +12,7 @@ void InputPin::receiveSignal(const Signal& signal) {
 }
 
 bool InputPin::onConnect(const WirePtr& wire) {
-	if (!m_connectedWire && wire->setDestination(shared_from_this())) {
+	if (!m_connectedWire && wire->setDestination(this)) {
 		m_connectedWire = wire;
 		return true;
 	}
