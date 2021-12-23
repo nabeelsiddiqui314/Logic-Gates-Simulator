@@ -12,6 +12,7 @@ public:
 public:
 	bool connect(const PinPtr& pin);
 	void disconnect(const PinPtr& pin);
+	void disconnectCompletely();
 
 	void transmitSignal(const Signal& signal);
 

@@ -2,12 +2,7 @@
 #include "IPin.h"
 
 Wire::~Wire() {
-	if (m_sourcePin) {
-		m_sourcePin->onDisconnect(shared_from_this());
-	}
-	if (m_destinationPin) {
-		m_destinationPin->onDisconnect(shared_from_this());
-	}
+	disconnectCompletely();
 }
 
 bool Wire::connect(const PinPtr& pin) {
@@ -16,6 +11,15 @@ bool Wire::connect(const PinPtr& pin) {
 
 void Wire::disconnect(const PinPtr& pin) {
 	pin->onDisconnect(shared_from_this());
+}
+
+void Wire::disconnectCompletely() {
+	if (m_sourcePin) {
+		m_sourcePin->onDisconnect(shared_from_this());
+	}
+	if (m_destinationPin) {
+		m_destinationPin->onDisconnect(shared_from_this());
+	}
 }
 
 void Wire::transmitSignal(const Signal& signal) {
