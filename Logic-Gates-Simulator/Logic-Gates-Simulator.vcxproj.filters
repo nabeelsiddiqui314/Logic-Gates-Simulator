@@ -18,30 +18,30 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\Wire.cpp">
+    <ClCompile Include="src\Connection\InputPin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\InputPin.cpp">
+    <ClCompile Include="src\Connection\OutputPin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\OutputPin.cpp">
+    <ClCompile Include="src\Connection\Wire.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Core\IPin.h">
+    <ClInclude Include="src\Connection\InputPin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\Signal.h">
+    <ClInclude Include="src\Connection\IPin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\Wire.h">
+    <ClInclude Include="src\Connection\OutputPin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\InputPin.h">
+    <ClInclude Include="src\Connection\Signal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\OutputPin.h">
+    <ClInclude Include="src\Connection\Wire.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
