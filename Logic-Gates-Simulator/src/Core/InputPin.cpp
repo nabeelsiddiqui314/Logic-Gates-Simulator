@@ -3,7 +3,7 @@
 
 InputPin::~InputPin() {
 	if (m_connectedWire) {
-		m_connectedWire->removeDestination();
+		m_connectedWire->disconnectCompletely();
 	}
 }
 
@@ -22,6 +22,6 @@ bool InputPin::onConnect(const WirePtr& wire) {
 void InputPin::onDisconnect(const WirePtr& wire) {
 	if (m_connectedWire == wire) {
 		wire->removeDestination();
-		m_connectedWire = nullptr;
+		m_connectedWire.reset();
 	}
 }

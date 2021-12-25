@@ -3,7 +3,7 @@
 
 OutputPin::~OutputPin() {
 	for (auto& wire : m_connectedWires) {
-		wire->removeDestination();
+		wire->disconnectCompletely();
 	}
 }
 
