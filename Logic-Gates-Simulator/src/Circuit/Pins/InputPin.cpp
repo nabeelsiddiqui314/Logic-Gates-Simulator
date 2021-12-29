@@ -15,7 +15,9 @@ InputPin::~InputPin() {
 }
 
 void InputPin::receiveSignal(const Signal& signal) {
-	m_parentGate->process();
+	if (m_parentGate) {
+		m_parentGate->process();
+	}
 }
 
 bool InputPin::onConnect(const WirePtr& wire) {
