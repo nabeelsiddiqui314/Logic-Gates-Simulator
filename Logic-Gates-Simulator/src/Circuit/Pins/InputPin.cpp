@@ -1,5 +1,12 @@
 #include "InputPin.h"
 #include "../Connection/Wire.h"
+#include "../Gates/IGate.h"
+
+InputPin::InputPin() 
+	: m_parentGate(nullptr) {}
+
+InputPin::InputPin(IGate* parentGate) 
+	: m_parentGate(parentGate) {}
 
 InputPin::~InputPin() {
 	if (m_connectedWire) {
@@ -8,7 +15,7 @@ InputPin::~InputPin() {
 }
 
 void InputPin::receiveSignal(const Signal& signal) {
-	
+	m_parentGate->process();
 }
 
 bool InputPin::onConnect(const WirePtr& wire) {

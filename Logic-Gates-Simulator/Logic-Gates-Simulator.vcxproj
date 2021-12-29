@@ -150,6 +150,7 @@
     <ClInclude Include="src\Circuit\Pins\OutputPin.h" />
     <ClInclude Include="src\Circuit\Signal.h" />
     <ClInclude Include="src\Circuit\Connection\Wire.h" />
+    <ClInclude Include="src\Circuit\Gates\IGate.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

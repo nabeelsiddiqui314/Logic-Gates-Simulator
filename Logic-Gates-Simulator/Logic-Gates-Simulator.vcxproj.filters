@@ -44,5 +44,8 @@
     <ClInclude Include="src\Circuit\Connection\Wire.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Circuit\Gates\IGate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
