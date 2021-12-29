@@ -1,5 +1,5 @@
 #include "OutputPin.h"
-#include "Wire.h"
+#include "../Connection/Wire.h"
 
 OutputPin::~OutputPin() {
 	for (auto& wire : m_connectedWires) {

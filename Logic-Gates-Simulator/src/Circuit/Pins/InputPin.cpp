@@ -1,5 +1,5 @@
 #include "InputPin.h"
-#include "Wire.h"
+#include "../Connection/Wire.h"
 
 InputPin::~InputPin() {
 	if (m_connectedWire) {

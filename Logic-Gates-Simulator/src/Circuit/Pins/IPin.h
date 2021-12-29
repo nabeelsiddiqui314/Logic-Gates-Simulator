@@ -1,6 +1,6 @@
 #pragma once
 #include <memory>
-#include "Signal.h"
+#include "../Signal.h"
 
 class Wire;
 

@@ -1,5 +1,5 @@
 #include "Wire.h"
-#include "IPin.h"
+#include "../Pins/IPin.h"
 
 Wire::~Wire() {
 	disconnectCompletely();
