@@ -164,6 +164,8 @@
     <ClInclude Include="src\Circuit\Connection\Wire.h" />
     <ClInclude Include="src\Circuit\Gates\IGate.h" />
     <ClInclude Include="src\Rendering\IGraphicsComponent.h" />
+    <ClInclude Include="src\Rendering\IPositionable.h" />
+    <ClInclude Include="src\Rendering\Position.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
