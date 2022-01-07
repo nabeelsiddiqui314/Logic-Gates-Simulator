@@ -7,9 +7,9 @@ namespace sf {
 
 class IPositionable;
 
+typedef std::weak_ptr<IPositionable> ParentPtr;
+
 class IGraphicsComponent {
-private:
-	typedef std::weak_ptr<IPositionable> ParentPtr;
 public:
 	IGraphicsComponent() = default;
 	virtual ~IGraphicsComponent() = default;

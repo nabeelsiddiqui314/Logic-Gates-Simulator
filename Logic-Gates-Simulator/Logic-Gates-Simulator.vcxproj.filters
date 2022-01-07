@@ -27,6 +27,9 @@
     <ClCompile Include="src\Circuit\Connection\Wire.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Rendering\GraphicalComponents\CompositeGraphicalComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Circuit\Pins\IPin.h">
@@ -47,13 +50,16 @@
     <ClInclude Include="src\Circuit\Gates\IGate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Rendering\IGraphicsComponent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Rendering\IPositionable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Rendering\Position.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rendering\GraphicalComponents\IGraphicsComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rendering\GraphicalComponents\CompositeGraphicalComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
