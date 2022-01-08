@@ -3,6 +3,7 @@
 
 namespace sf {
 	class RenderWindow;
+	class Event;
 }
 
 class IPositionable;
@@ -14,6 +15,7 @@ public:
 	IGraphicsComponent() = default;
 	virtual ~IGraphicsComponent() = default;
 public:
+	virtual bool handleEvent(const sf::Event& event) = 0;
 	virtual void setParent(const ParentPtr& parent) = 0;
 	virtual void draw(sf::RenderWindow& window) = 0;
 };
