@@ -30,6 +30,9 @@
     <ClCompile Include="src\Rendering\GraphicalComponents\CompositeGraphicalComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Rendering\GraphicalComponents\TexturedComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Circuit\Pins\IPin.h">
@@ -60,6 +63,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Rendering\GraphicalComponents\CompositeGraphicalComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Rendering\GraphicalComponents\TexturedComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
