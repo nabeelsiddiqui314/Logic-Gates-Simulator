@@ -11,7 +11,7 @@ public:
 	~TexturedComponent() = default;
 public:
 	void setParent(const ParentPtr& parent) override;
-	Position getPosition() override;
+	sf::Vector2f getPosition() override;
 
 	bool handleEvent(const sf::Event& event) override;
 	void draw(sf::RenderWindow& window) override;
@@ -19,6 +19,6 @@ private:
 	sf::Sprite m_body;
 	sf::Texture m_texture;
 
-	Position m_position;
+	sf::Vector2f m_position;
 	ParentPtr m_parentPtr;
 };

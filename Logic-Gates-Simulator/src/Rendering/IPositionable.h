@@ -1,10 +1,10 @@
 #pragma once
-#include "Position.h"
+#include <SFML/System/Vector2.hpp>
 
 class IPositionable {
 public:
 	IPositionable() = default;
 	virtual ~IPositionable() = default;
 public:
-	virtual Position getPosition() = 0;
+	virtual sf::Vector2f getPosition() = 0;
 };
