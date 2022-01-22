@@ -30,7 +30,7 @@
     <ClCompile Include="src\Rendering\GraphicalComponents\CompositeGraphicalComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Rendering\GraphicalComponents\TexturedComponent.cpp">
+    <ClCompile Include="src\Rendering\GraphicalComponents\IGraphicsComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,16 +53,10 @@
     <ClInclude Include="src\Circuit\Gates\IGate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Rendering\IPositionable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Rendering\GraphicalComponents\IGraphicsComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Rendering\GraphicalComponents\CompositeGraphicalComponent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Rendering\GraphicalComponents\TexturedComponent.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

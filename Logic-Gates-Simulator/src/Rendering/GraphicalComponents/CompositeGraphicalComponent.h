@@ -2,19 +2,18 @@
 #include <memory>
 #include <vector>
 #include "IGraphicsComponent.h"
-#include "../IPositionable.h"
 
 typedef std::shared_ptr<IGraphicsComponent> GraphicalComponentPtr;
 
-class CompositeGraphicalComponent 
-	: public IGraphicsComponent, public IPositionable, private std::enable_shared_from_this<CompositeGraphicalComponent> {
+class CompositeGraphicalComponent : public IGraphicsComponent, private std::enable_shared_from_this<CompositeGraphicalComponent> {
 public:
 	CompositeGraphicalComponent() = default;
 	~CompositeGraphicalComponent() = default;
 public:
 	void addChild(const GraphicalComponentPtr& child);
-protected:
-	std::vector<GraphicalComponentPtr> getChildren() const;
+
+	virtual bool handleEvent(const sf::Event& event) override;
+	virtual void draw(sf::RenderWindow& window) override;
 private:
 	std::vector<GraphicalComponentPtr> m_children;
 };
