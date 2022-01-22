@@ -156,7 +156,7 @@
     <ClCompile Include="src\Circuit\Connection\Wire.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Rendering\GraphicalComponents\CompositeGraphicalComponent.cpp" />
-    <ClCompile Include="src\Rendering\GraphicalComponents\IGraphicsComponent.cpp" />
+    <ClCompile Include="src\Rendering\GraphicalComponents\GraphicsComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Circuit\Pins\InputPin.h" />
@@ -166,7 +166,7 @@
     <ClInclude Include="src\Circuit\Connection\Wire.h" />
     <ClInclude Include="src\Circuit\Gates\IGate.h" />
     <ClInclude Include="src\Rendering\GraphicalComponents\CompositeGraphicalComponent.h" />
-    <ClInclude Include="src\Rendering\GraphicalComponents\IGraphicsComponent.h" />
+    <ClInclude Include="src\Rendering\GraphicalComponents\GraphicsComponent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
