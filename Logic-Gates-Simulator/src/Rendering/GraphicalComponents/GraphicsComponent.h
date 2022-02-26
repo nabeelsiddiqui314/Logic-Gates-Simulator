@@ -19,7 +19,7 @@ public:
 	void setPosition(const sf::Vector2f& position);
 	sf::Vector2f getPosition() const;
 
-	virtual bool handleEvent(const sf::Event& event) = 0;
+	virtual bool handleEvent(const sf::Event& event);
 	virtual void draw(sf::RenderWindow& window) = 0;
 private:
 	std::weak_ptr<GraphicsComponent> m_parentPtr;

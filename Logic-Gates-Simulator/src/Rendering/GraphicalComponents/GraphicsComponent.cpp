@@ -1,4 +1,5 @@
 #include "GraphicsComponent.h"
+#include <SFML/Window/Event.hpp>
 
 namespace UI {
 
@@ -18,6 +19,18 @@ sf::Vector2f GraphicsComponent::getPosition() const {
     }
 
     return m_position + parentPosition;
+}
+
+bool GraphicsComponent::handleEvent(const sf::Event& event) {
+    switch (event.type) {
+    case sf::Event::MouseMoved:
+        break;
+    case sf::Event::MouseButtonPressed:
+        
+        break;
+    }
+
+    return false;
 }
 
 }

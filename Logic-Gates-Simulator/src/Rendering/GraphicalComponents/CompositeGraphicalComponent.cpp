@@ -14,7 +14,7 @@ bool CompositeGraphicalComponent::handleEvent(const sf::Event& event) {
 		}
 	}
 
-	return false;
+	return GraphicsComponent::handleEvent(event);
 }
 
 void CompositeGraphicalComponent::draw(sf::RenderWindow& window) {
